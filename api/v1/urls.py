@@ -4,15 +4,13 @@ from rest_framework.routers import DefaultRouter
 from .resources import (
     user,
     color,
-    shape,
 )
 
 router = DefaultRouter()
 
-router.register('users', user.Viewset)
-router.register('colors', color.Viewset)
-router.register('shapes', shape.Viewset)
+router.register("users", user.Viewset)
+router.register("colors", color.Viewset)
 
 urlpatterns = [
-    path('', include(router.urls)),
+    path("", include(router.urls)),
 ]
